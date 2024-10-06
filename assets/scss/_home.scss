@@ -232,6 +232,8 @@ $gap: 20px;
                 min-height: 70vh;
                 color: $white;
                 padding: 0 40px;
+                border-radius: 10px;
+                overflow: hidden;
                 &::after{
                     content: '';
                     background: linear-gradient(179.77deg, rgba(0, 0, 0, 0) 52.63%, rgba(0, 0, 0, 0.8) 99.8%);
@@ -267,6 +269,8 @@ $gap: 20px;
             &_single{
                 position: relative;
                 min-height: calc(35vh - 15px);
+                border-radius: 10px;
+                overflow: hidden;
                 &::after{
                     content: '';
                     background: linear-gradient(179.77deg, rgba(0, 0, 0, 0) 52.63%, rgba(0, 0, 0, 0.8) 99.8%);

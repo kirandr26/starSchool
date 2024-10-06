@@ -433,6 +433,159 @@ header {
   max-width: 32px;
 }
 
+.footer {
+  background-color: #000521;
+}
+
+.logoSection {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 60px 0;
+  grid-gap: 120px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.logoSection .logoDiv {
+  position: relative;
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.logoSection .logoDiv.div1 {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.logoSection .logoDiv.div1 a, .logoSection .logoDiv.div1 i, .logoSection .logoDiv.div1 p {
+  color: #fff;
+}
+.logoSection .logoDiv.div1 p {
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 30px;
+}
+.logoSection .logoDiv.div1 .socialLinks {
+  margin-top: 45px;
+}
+.logoSection .logoDiv.div1 .socialLinks ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 30px;
+}
+.logoSection .logoDiv.div1 .socialLinks ul li {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.logoSection .logoDiv.div1 .socialLinks ul a, .logoSection .logoDiv.div1 .socialLinks ul i {
+  font-size: 20px;
+  color: #12A7FE;
+}
+.logoSection .logoDiv .iconWrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  border: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.logoSection .logoDiv .iconWrap i {
+  color: #12A7FE;
+  font-size: 20px;
+}
+.logoSection .logoDiv .cntWrap {
+  text-align: center;
+}
+.logoSection .logoDiv .cntWrap p, .logoSection .logoDiv .cntWrap a {
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+}
+.logoSection .logoDiv .cntWrap a {
+  display: block;
+}
+
+.menusWrap {
+  position: relative;
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.menusWrap .menuLinks a {
+  font-size: 18px;
+  line-height: 28px;
+  color: #fff;
+  display: block;
+  margin-bottom: 15px;
+}
+.menusWrap .menuLinks a:last-child {
+  margin-bottom: 0;
+}
+
+.copyRight {
+  position: relative;
+  padding: 20px 0;
+  text-align: center;
+}
+.copyRight p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  opacity: 0.8;
+}
+
 .homeBanner {
   position: relative;
   width: 100%;
@@ -701,6 +854,8 @@ header {
   min-height: 70vh;
   color: #fff;
   padding: 0 40px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .facilities_imgBlk .imgGrid_cnt::after {
   content: "";
@@ -745,6 +900,8 @@ header {
 .facilities_imgBlk .imgGrid_single {
   position: relative;
   min-height: calc(35vh - 15px);
+  border-radius: 10px;
+  overflow: hidden;
 }
 .facilities_imgBlk .imgGrid_single::after {
   content: "";
