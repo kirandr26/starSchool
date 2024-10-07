@@ -110,3 +110,35 @@
         opacity: 0.8;
     }
 }
+
+.footer_marquee {
+    background-color: #000521;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+    .marqueeFooter {
+        display: flex;
+        white-space: nowrap;
+        position: relative;
+        grid-gap: 35px;
+        
+        animation: marquee 12s linear infinite;
+        /* keyframe */
+        @keyframes marquee {
+            0% { left: 0; }
+            100% { left: -100%; }
+        }
+        .marquee_item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-gap: 35px;
+            h1{
+                font-size: 80px;
+                line-height: 1;
+                color: $white;
+                font-family: $thin;
+            }
+        }
+    }
+}

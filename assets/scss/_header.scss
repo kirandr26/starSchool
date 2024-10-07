@@ -11,6 +11,7 @@ header{
     width: 100%;
     padding: 20px 100px;
     text-align: center;
+    transition: all 400ms ease-in-out;
     p{
         font-size: 18px;
         line-height: 28px;
@@ -27,6 +28,7 @@ header{
 .shadowHeader{
     box-shadow: 0px 2px 27.6px 0px #00000026;
     background-color: $white;
+    transition: all 400ms ease-in-out;
 }
 .header{
     position: relative;
@@ -70,6 +72,21 @@ header{
                     max-width: 32px;
                 }
             }
+        }
+    }
+   
+}
+
+header{
+    &.scrolled{
+        .preHeader{
+            transform: translateY(-100%);
+        }
+        .shadowHeader{
+            transform: translateY(-68px);
+        }
+        .logo a img{
+            width: 150px;
         }
     }
 }

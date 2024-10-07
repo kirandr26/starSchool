@@ -32,37 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	startScrolling();
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-	const marquee = document.querySelector(".marqueeName");
-	const speed = 1; // Scrolling Speed
-	let scrollAmount = 0;
-	let isHovered = false;
 
-	// Duplicates the content
-	const marqueeContent = marquee.innerHTML;
-	marquee.innerHTML += marqueeContent;
-
-	// const startScrolling = () => {
-	// 	if (!isHovered) {
-	// 		scrollAmount -= speed;
-	// 		if (Math.abs(scrollAmount) >= marquee.scrollWidth / 2) {
-	// 			scrollAmount = 0;
-	// 		}
-	// 		marquee.style.transform = `translateX(${scrollAmount}px)`;
-	// 	}
-	// 	requestAnimationFrame(startScrolling);
-	// };
-
-	marquee.addEventListener("mouseover", () => {
-		isHovered = true;
-	});
-
-	marquee.addEventListener("mouseout", () => {
-		isHovered = false;
-	});
-
-	startScrolling();
-});
 document.addEventListener("DOMContentLoaded", () => {
 	function counter(id, start, end, duration) {
 	 let obj = document.getElementById(id),
@@ -103,6 +73,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 $(document).ready(function() {
+	// $('.marqueeFooter').slick({
+    //     speed: 8000,
+	// 	autoplay: true,
+	// 	autoplaySpeed: 0,
+	// 	centerMode: false,
+	// 	cssEase: 'linear',
+	// 	draggable:false,
+	// 	focusOnSelect:false,
+	// 	pauseOnFocus:false,
+	// 	pauseOnHover:false,
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	variableWidth: true,
+	// 	infinite: true,
+	// 	initialSlide: 1,
+	// 	arrows: false,
+	// 	buttons: false,
+	// 	rtl:true 
+    // });
+
+	$(window).on("scroll", function () {
+        var scrollPos = $(window).scrollTop();
+        if (scrollPos > 100) {
+            $('header').addClass('scrolled');
+        } else {
+            $('header').removeClass('scrolled');
+        }
+    });
 	
 	$('.imgWrap').hover(
 	  function() {

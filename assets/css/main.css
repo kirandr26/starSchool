@@ -294,11 +294,11 @@ p.pText {
 }
 
 .bottomGap {
-  padding-bottom: 20vh;
+  padding-bottom: 15vh;
 }
 
 .bottomMargin {
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
 }
 
 .h4 {
@@ -338,6 +338,8 @@ header {
   width: 100%;
   padding: 20px 100px;
   text-align: center;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 .preHeader p {
   font-size: 18px;
@@ -362,6 +364,8 @@ header {
   -webkit-box-shadow: 0px 2px 27.6px 0px rgba(0, 0, 0, 0.1490196078);
           box-shadow: 0px 2px 27.6px 0px rgba(0, 0, 0, 0.1490196078);
   background-color: #fff;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
 .header {
@@ -431,6 +435,18 @@ header {
 }
 .header_menu .menuIcon span:nth-child(2) {
   max-width: 32px;
+}
+
+header.scrolled .preHeader {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+header.scrolled .shadowHeader {
+  -webkit-transform: translateY(-68px);
+          transform: translateY(-68px);
+}
+header.scrolled .logo a img {
+  width: 150px;
 }
 
 .footer {
@@ -584,6 +600,58 @@ header {
   font-size: 16px;
   line-height: 26px;
   opacity: 0.8;
+}
+
+.footer_marquee {
+  background-color: #000521;
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+}
+.footer_marquee .marqueeFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  position: relative;
+  grid-gap: 35px;
+  -webkit-animation: marquee 12s linear infinite;
+          animation: marquee 12s linear infinite;
+  /* keyframe */
+}
+@-webkit-keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+.footer_marquee .marqueeFooter .marquee_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 35px;
+}
+.footer_marquee .marqueeFooter .marquee_item h1 {
+  font-size: 80px;
+  line-height: 1;
+  color: #fff;
+  font-family: "Raleway-Thin";
 }
 
 .homeBanner {
@@ -853,9 +921,20 @@ header {
   height: 100%;
   min-height: 70vh;
   color: #fff;
-  padding: 0 40px;
   border-radius: 10px;
   overflow: hidden;
+}
+.facilities_imgBlk .imgGrid_cnt_imgwrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 0 40px;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+.facilities_imgBlk .imgGrid_cnt:hover .imgGrid_cnt_imgwrap {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .facilities_imgBlk .imgGrid_cnt::after {
   content: "";
@@ -902,6 +981,10 @@ header {
   min-height: calc(35vh - 15px);
   border-radius: 10px;
   overflow: hidden;
+}
+.facilities_imgBlk .imgGrid_single:hover .imgGrid_cnt_imgwrap {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .facilities_imgBlk .imgGrid_single::after {
   content: "";
@@ -962,6 +1045,10 @@ header {
   bottom: 0;
   z-index: 1;
   padding: 30px;
+  -webkit-transform: translateY(75px);
+          transform: translateY(75px);
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 .team_cards .tCard_cnt .h4 {
   color: #fff;
@@ -969,6 +1056,18 @@ header {
 }
 .team_cards .tCard_cnt p {
   color: #C4C4C4;
+  opacity: 0;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+  -webkit-transition-delay: 400ms;
+          transition-delay: 400ms;
+}
+.team_cards .tCard:hover .tCard_cnt {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.team_cards .tCard:hover .tCard_cnt p {
+  opacity: 1;
 }
 
 .philosophy {
@@ -1005,11 +1104,19 @@ header {
   border-radius: 30px;
   z-index: 1;
 }
+.philosophy_cards .pCard.pCard1 .pCard_inner {
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
 .philosophy_cards .pCard.pCard1:after {
   -webkit-transform: rotate(-3deg);
           transform: rotate(-3deg);
 }
 .philosophy_cards .pCard.pCard3:after {
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+}
+.philosophy_cards .pCard.pCard3:after .pCard_inner {
   -webkit-transform: rotate(3deg);
           transform: rotate(3deg);
 }
@@ -1055,6 +1162,10 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  grid-gap: 50px;
+}
+.logos_imgblk img {
+  width: 100%;
 }
 
 .stats {
