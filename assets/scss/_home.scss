@@ -406,10 +406,10 @@ $gap: 20px;
                 }
             }
             &.pCard3{
+                .pCard_inner{
+                    transform: rotate(3deg);
+                }
                 &:after{
-                    .pCard_inner{
-                        transform: rotate(3deg);
-                    }
                     transform: rotate(3deg);
                 }
             }

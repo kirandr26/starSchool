@@ -1110,11 +1110,11 @@ header.scrolled .logo a img {
   -webkit-transform: rotate(-3deg);
           transform: rotate(-3deg);
 }
-.philosophy_cards .pCard.pCard3:after {
+.philosophy_cards .pCard.pCard3 .pCard_inner {
   -webkit-transform: rotate(3deg);
           transform: rotate(3deg);
 }
-.philosophy_cards .pCard.pCard3:after .pCard_inner {
+.philosophy_cards .pCard.pCard3:after {
   -webkit-transform: rotate(3deg);
           transform: rotate(3deg);
 }
