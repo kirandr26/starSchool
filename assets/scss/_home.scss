@@ -22,7 +22,7 @@
 	white-space: nowrap;
 	position: absolute;
 	width: 100%;
-    max-height: 400px;
+    max-height: 50vh;
     bottom: 0;
 }
 
@@ -106,21 +106,21 @@ $gap: 20px;
                 width: 100%;
                 height: 100%;
                 h3{
-                    font-size: 46px;
-                    line-height: 56px;
+                    font-size:32px;
+                    line-height: 42px;
                     font-family: $bold;
                     color: $white;
                     margin-bottom: 20px;
                     position: absolute;
-                    bottom: 90px;
+                    bottom: 120px;
                 }
                 p{
-                    font-size: 24px;
-                    line-height: 34px;
+                    font-size: 20px;
+                    line-height: 30px;
                     color: #c4c4c4;
                     font-family: $medium;
                    
-                    transition-delay: 400ms;
+                    // transition-delay: 400ms;
                     opacity: 0;
                     position: absolute;
                     bottom: 30px;
