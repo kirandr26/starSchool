@@ -57,3 +57,12 @@
         color: $black;
     }
   }
+
+
+  // Mixins
+
+  @mixin breakpoint($bp) {
+    @media (max-width: $bp) {
+        @content;
+    }
+}

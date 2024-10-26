@@ -12,10 +12,20 @@ header{
     padding: 20px 100px;
     text-align: center;
     transition: all 400ms ease-in-out;
+    @include breakpoint(1536px){
+        padding: 10px 50px;
+    }
+    @include breakpoint(760px){
+        padding: 10px 20px;
+    }
     p{
         font-size: 18px;
         line-height: 28px;
         color: $white;
+        @include breakpoint(760px){
+            font-size: 14px;
+            line-height: 24px;
+        }
         a{
             color:$white;
             display: flex;
@@ -45,6 +55,13 @@ header{
             img{
                 width: 200px;
                 height: auto;
+                transition: all 400ms ease-in-out;
+                @include breakpoint(1536px){
+                    width: 150px;
+                }
+                @include breakpoint(760px){
+                    width: 100px;
+                }
             }
         }
     }
@@ -54,6 +71,9 @@ header{
         justify-content: flex-end;
         align-items: center;
         grid-gap: 60px;
+        @include breakpoint(760px){
+            grid-gap: 10px;
+        }
         .menuIcon{
             width: 40px;
             height: 38px;
@@ -63,6 +83,10 @@ header{
             align-items: flex-end;
             flex-direction: column;
             cursor: pointer;
+            @include breakpoint(760px){
+                width: 30px;
+                height: 28px;
+            }
             span{
                 position: relative;
                 width: 100%;
@@ -70,6 +94,9 @@ header{
                 background-color: $blue;
                 &:nth-child(2){
                     max-width: 32px;
+                    @include breakpoint(760px){
+                        max-width: 22px;
+                    }
                 }
             }
         }
@@ -84,9 +111,21 @@ header{
         }
         .shadowHeader{
             transform: translateY(-68px);
+            @include breakpoint(1536px){
+                transform: translateY(-48px);
+            }
+            @include breakpoint(760px){
+                transform: translateY(-68px);
+            }
         }
         .logo a img{
             width: 150px;
+            @include breakpoint(1536px){
+                width: 120px;
+            }
+            @include breakpoint(760px){
+                width: 100px;
+            }
         }
     }
 }

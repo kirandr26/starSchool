@@ -9,6 +9,13 @@
     padding: 60px 0;
     grid-gap: 120px;
     border-bottom: 1px solid rgba($white,0.25);
+    @include breakpoint(1366px){
+        padding: 30px 0;
+    }
+    @include breakpoint(1024px){
+        flex-direction: column;
+        grid-gap: 50px;
+    }
     .logoDiv{
         position: relative;
         width: calc(100%/4);
@@ -16,9 +23,19 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        
+        @include breakpoint(1024px){
+            width: calc(100%);
+        }
+        img{
+            @include breakpoint(1366px){
+               width: 180px;
+            }
+        }
         &.div1{
             align-items: flex-start;
+            @include breakpoint(1024px){
+                align-items: center;
+            }
             a,i,p{
                 color: $white;
             }
@@ -26,9 +43,17 @@
                 font-size: 18px;
                 line-height: 28px;
                 margin-top: 30px;
+                @include breakpoint(1366px){
+                    font-size: 16px;
+                    line-height: 26px;
+                    margin-bottom: 20px;
+                }
             }
             .socialLinks{
                 margin-top: 45px;
+                @include breakpoint(1366px){
+                    margin-top: 30px;
+                }
                ul{
                     position: relative;
                     display: flex;
@@ -71,6 +96,10 @@
                 font-size: 20px;
                 line-height: 30px;
                 color: $white;
+                @include breakpoint(1366px){
+                    font-size: 18px;
+                    line-height: 28px;
+                }
             }
             a{
                 display: block;
@@ -86,13 +115,29 @@
     justify-content: space-between;
     align-items: flex-start;
     border-bottom: 1px solid rgba($white,0.25);
+    @include breakpoint(1366px){
+        padding: 30px 0;
+    }
+    @include breakpoint(760px){
+        flex-direction: column;
+        grid-gap: 30px;
+        align-items: center;
+    }
     .menuLinks{
+        @include breakpoint(760px){
+            text-align: center;
+        }
         a{
             font-size: 18px;
             line-height: 28px;
             color: $white;
             display: block;
             margin-bottom: 15px;
+            @include breakpoint(1366px){
+                margin-bottom: 10px;
+                font-size: 16px;
+                line-height: 24px;
+            }
             &:last-child{
                 margin-bottom: 0;
             }
@@ -103,11 +148,18 @@
     position: relative;
     padding: 20px 0;
     text-align: center;
+    @include breakpoint(1366px){
+        padding: 10px 0;
+    }
     p{
         color: $white;
         font-size: 16px;
         line-height: 26px;
         opacity: 0.8;
+        @include breakpoint(1366px){
+            font-size: 14px;
+            line-height: 24px;
+        }
     }
 }
 
@@ -116,6 +168,9 @@
     overflow: hidden;
     width: 100%;
     padding: 20px 0;
+    @include breakpoint(1366px){
+        padding: 15px 0;
+    }
     .marqueeFooter {
         display: flex;
         white-space: nowrap;
@@ -138,6 +193,9 @@
                 line-height: 1;
                 color: $white;
                 font-family: $thin;
+                @include breakpoint(1366px){
+                    font-size: 40px;
+                }
             }
         }
     }

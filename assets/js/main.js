@@ -130,12 +130,12 @@ $(document).ready(function() {
         dots: false,
 		responsive: [
 		  {
-			breakpoint: 768,
+			breakpoint: 1025,
 			settings: {
 			  arrows: false,
 			  centerMode: true,
-			  centerPadding: '40px',
-			  slidesToShow: 3
+			  centerPadding: '0',
+			  slidesToShow: 1
 			}
 		  },
 		  {
@@ -143,7 +143,7 @@ $(document).ready(function() {
 			settings: {
 			  arrows: false,
 			  centerMode: true,
-			  centerPadding: '40px',
+			  centerPadding: '0',
 			  slidesToShow: 1
 			}
 		  }
