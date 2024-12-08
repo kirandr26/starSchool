@@ -1,0 +1,74 @@
+.teamCards{
+    .team{
+        &_cards{
+            flex-wrap: wrap;
+            justify-content: center;
+            @include breakpoint(1536px){
+               grid-gap: 30px;
+            }
+            .tCard{
+                width: calc(25% - 38px);
+                @include breakpoint(1536px){
+                    width: calc(25% - 23px);
+                }
+            }
+        }
+    }
+}
+
+.boardMem{
+    position: relative;
+    background-color: #B6D3FF2B;
+    &_cards{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        grid-gap: 120px;
+    }
+    .bCard{
+        &_img{
+            position: relative;
+            width: 340px;
+            height: auto;
+           
+            padding-bottom: 30px;
+            img{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 50%;
+                border-bottom-left-radius: 0;
+                z-index: 2;
+                &.fixedImg{
+                    position: absolute;
+                    bottom: 0;
+                    left: -30px;
+                    width: 70px;
+                    height: auto;
+                    border-radius: 0;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
+.governance{
+    position: relative;
+    padding: 80px;
+    background: #0220C1CC;
+    border-radius: 60px;
+    @include breakpoint(1366px){
+        padding: 50px;
+    }
+    .h1{
+        color: $white;
+    }
+    ul{
+        li{
+            color: $white;
+        }
+    }
+}

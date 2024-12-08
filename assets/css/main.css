@@ -192,6 +192,7 @@ body a :hover {
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   margin: 0;
+  color: #515151;
 }
 
 .bgImg {
@@ -602,7 +603,8 @@ header {
     grid-gap: 10px;
   }
 }
-.header_menu .menuIcon {
+
+.menuIcon {
   width: 40px;
   height: 38px;
   position: relative;
@@ -622,24 +624,193 @@ header {
   cursor: pointer;
 }
 @media (max-width: 760px) {
-  .header_menu .menuIcon {
+  .menuIcon {
     width: 30px;
     height: 28px;
   }
 }
-.header_menu .menuIcon span {
+.menuIcon span {
   position: relative;
   width: 100%;
   height: 2px;
   background-color: #223285;
 }
-.header_menu .menuIcon span:nth-child(2) {
+.menuIcon span:nth-child(2) {
   max-width: 32px;
 }
 @media (max-width: 760px) {
-  .header_menu .menuIcon span:nth-child(2) {
+  .menuIcon span:nth-child(2) {
     max-width: 22px;
   }
+}
+
+body.bodyMenuOpened {
+  overflow: hidden;
+}
+
+.menuLinks {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 400px;
+  background-color: #fff;
+  height: 100vh;
+  overflow: auto;
+  -webkit-transform: translateX(400px);
+          transform: translateX(400px);
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.menuLinks.MenuOpened {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.menuLinks .menuClose {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.menuLinks ul {
+  padding: 30px;
+  padding-top: 100px;
+}
+.menuLinks ul li {
+  position: relative;
+}
+.menuLinks ul li a {
+  position: relative;
+  display: table;
+  padding: 10px 20px;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 600;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+  color: #F37952;
+}
+.menuLinks ul li a:hover {
+  color: #223285;
+}
+
+.menuClose {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+.menuClose span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #223285;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+.menuClose span:nth-child(2) {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+.menuClose span:nth-child(3) {
+  display: none;
+}
+.menuClose:hover span {
+  -webkit-animation: elastic 0.6s ease-out;
+          animation: elastic 0.6s ease-out;
+}
+
+@-webkit-keyframes elastic {
+  0% {
+    -webkit-transform: scale(1) translate(-50%, -50%) rotate(45deg);
+            transform: scale(1) translate(-50%, -50%) rotate(45deg);
+  }
+  40% {
+    -webkit-transform: scale(1.2, 0.8) translate(-50%, -50%) rotate(45deg);
+            transform: scale(1.2, 0.8) translate(-50%, -50%) rotate(45deg); /* Stretch horizontally */
+  }
+  60% {
+    -webkit-transform: scale(0.8, 1.2) translate(-50%, -50%) rotate(45deg);
+            transform: scale(0.8, 1.2) translate(-50%, -50%) rotate(45deg); /* Stretch vertically */
+  }
+  100% {
+    -webkit-transform: scale(1) translate(-50%, -50%) rotate(45deg);
+            transform: scale(1) translate(-50%, -50%) rotate(45deg); /* Return to normal */
+  }
+}
+
+@keyframes elastic {
+  0% {
+    -webkit-transform: scale(1) translate(-50%, -50%) rotate(45deg);
+            transform: scale(1) translate(-50%, -50%) rotate(45deg);
+  }
+  40% {
+    -webkit-transform: scale(1.2, 0.8) translate(-50%, -50%) rotate(45deg);
+            transform: scale(1.2, 0.8) translate(-50%, -50%) rotate(45deg); /* Stretch horizontally */
+  }
+  60% {
+    -webkit-transform: scale(0.8, 1.2) translate(-50%, -50%) rotate(45deg);
+            transform: scale(0.8, 1.2) translate(-50%, -50%) rotate(45deg); /* Stretch vertically */
+  }
+  100% {
+    -webkit-transform: scale(1) translate(-50%, -50%) rotate(45deg);
+            transform: scale(1) translate(-50%, -50%) rotate(45deg); /* Return to normal */
+  }
+}
+@-webkit-keyframes elastic-reverse {
+  0% {
+    -webkit-transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+            transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+  }
+  40% {
+    -webkit-transform: scale(1.2, 0.8) translate(-50%, -50%) rotate(-45deg);
+            transform: scale(1.2, 0.8) translate(-50%, -50%) rotate(-45deg); /* Stretch horizontally */
+  }
+  60% {
+    -webkit-transform: scale(0.8, 1.2) translate(-50%, -50%) rotate(-45deg);
+            transform: scale(0.8, 1.2) translate(-50%, -50%) rotate(-45deg); /* Stretch vertically */
+  }
+  100% {
+    -webkit-transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+            transform: scale(1) translate(-50%, -50%) rotate(-45deg); /* Return to normal */
+  }
+}
+@keyframes elastic-reverse {
+  0% {
+    -webkit-transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+            transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+  }
+  40% {
+    -webkit-transform: scale(1.2, 0.8) translate(-50%, -50%) rotate(-45deg);
+            transform: scale(1.2, 0.8) translate(-50%, -50%) rotate(-45deg); /* Stretch horizontally */
+  }
+  60% {
+    -webkit-transform: scale(0.8, 1.2) translate(-50%, -50%) rotate(-45deg);
+            transform: scale(0.8, 1.2) translate(-50%, -50%) rotate(-45deg); /* Stretch vertically */
+  }
+  100% {
+    -webkit-transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+            transform: scale(1) translate(-50%, -50%) rotate(-45deg); /* Return to normal */
+  }
+}
+/* Apply animation for both spans */
+.menuClose:hover span:nth-child(1) {
+  -webkit-animation: elastic 0.6s ease-out;
+          animation: elastic 0.6s ease-out;
+}
+
+.menuClose:hover span:nth-child(2) {
+  -webkit-animation: elastic-reverse 0.6s ease-out;
+          animation: elastic-reverse 0.6s ease-out;
 }
 
 header.scrolled .preHeader {
@@ -676,6 +847,22 @@ header.scrolled .logo a img {
   }
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #223285;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 6px;
+}
+
+/* Firefox */
 .footer {
   background-color: #000521;
 }
@@ -2364,4 +2551,88 @@ header.scrolled .logo a img {
   position: absolute;
   top: 5px;
   left: 0;
+}
+
+.teamCards .team_cards {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 1536px) {
+  .teamCards .team_cards {
+    grid-gap: 30px;
+  }
+}
+.teamCards .team_cards .tCard {
+  width: calc(25% - 38px);
+}
+@media (max-width: 1536px) {
+  .teamCards .team_cards .tCard {
+    width: calc(25% - 23px);
+  }
+}
+
+.boardMem {
+  position: relative;
+  background-color: rgba(182, 211, 255, 0.168627451);
+}
+.boardMem_cards {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  grid-gap: 120px;
+}
+.boardMem .bCard_img {
+  position: relative;
+  width: 340px;
+  height: auto;
+  padding-bottom: 30px;
+}
+.boardMem .bCard_img img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
+  border-bottom-left-radius: 0;
+  z-index: 2;
+}
+.boardMem .bCard_img img.fixedImg {
+  position: absolute;
+  bottom: 0;
+  left: -30px;
+  width: 70px;
+  height: auto;
+  border-radius: 0;
+  z-index: 1;
+}
+
+.governance {
+  position: relative;
+  padding: 80px;
+  background: rgba(2, 32, 193, 0.8);
+  border-radius: 60px;
+}
+@media (max-width: 1366px) {
+  .governance {
+    padding: 50px;
+  }
+}
+.governance .h1 {
+  color: #fff;
+}
+.governance ul li {
+  color: #fff;
 }

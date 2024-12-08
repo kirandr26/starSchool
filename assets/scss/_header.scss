@@ -74,34 +74,153 @@ header{
         @include breakpoint(760px){
             grid-gap: 10px;
         }
-        .menuIcon{
-            width: 40px;
-            height: 38px;
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            flex-direction: column;
-            cursor: pointer;
+        
+    }
+   
+}
+.menuIcon{
+    width: 40px;
+    height: 38px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+    cursor: pointer;
+    @include breakpoint(760px){
+        width: 30px;
+        height: 28px;
+    }
+    span{
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: $blue;
+        &:nth-child(2){
+            max-width: 32px;
             @include breakpoint(760px){
-                width: 30px;
-                height: 28px;
+                max-width: 22px;
             }
-            span{
+        }
+    }
+}
+body{
+    &.bodyMenuOpened{
+       overflow: hidden;
+    }
+}
+.menuLinks{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 400px;
+    background-color:#fff;
+    height: 100vh;
+    overflow: auto;
+    transform: translateX(400px);
+    transition: all 400ms ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    //box-shadow: 0px 2px 27.6px 0px rgba(0, 0, 0, 0.1490196078);
+    &.MenuOpened{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .menuClose{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+    ul{
+        padding: 30px;
+        padding-top: 100px;
+        li{
+            position: relative;
+            a{
                 position: relative;
-                width: 100%;
-                height: 2px;
-                background-color: $blue;
-                &:nth-child(2){
-                    max-width: 32px;
-                    @include breakpoint(760px){
-                        max-width: 22px;
-                    }
+                display: table;
+                padding: 10px 20px;
+                font-size: 24px;
+                line-height: 34px;
+                font-weight: 600;
+                transition: all 400ms ease-in-out;
+                color: $orange;
+                &:hover{
+                    color: $blue;
                 }
             }
         }
     }
-   
+}
+.menuClose {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 2px;
+        background-color: $blue;
+        transform-origin: center;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    span:nth-child(3) {
+        display: none; // Hide the third span
+    }
+    &:hover span {
+        animation: elastic 0.6s ease-out;
+    }
+}
+@keyframes elastic {
+    0% {
+        transform: scale(1) translate(-50%, -50%) rotate(45deg);
+    }
+    40% {
+        transform: scale(1.2, 0.8) translate(-50%, -50%) rotate(45deg); /* Stretch horizontally */
+    }
+    60% {
+        transform: scale(0.8, 1.2) translate(-50%, -50%) rotate(45deg); /* Stretch vertically */
+    }
+    100% {
+        transform: scale(1) translate(-50%, -50%) rotate(45deg); /* Return to normal */
+    }
+}
+
+@keyframes elastic-reverse {
+    0% {
+        transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+    }
+    40% {
+        transform: scale(1.2, 0.8) translate(-50%, -50%) rotate(-45deg); /* Stretch horizontally */
+    }
+    60% {
+        transform: scale(0.8, 1.2) translate(-50%, -50%) rotate(-45deg); /* Stretch vertically */
+    }
+    100% {
+        transform: scale(1) translate(-50%, -50%) rotate(-45deg); /* Return to normal */
+    }
+}
+
+/* Apply animation for both spans */
+.menuClose:hover span:nth-child(1) {
+    animation: elastic 0.6s ease-out;
+}
+
+.menuClose:hover span:nth-child(2) {
+    animation: elastic-reverse 0.6s ease-out;
 }
 
 header{
@@ -129,3 +248,25 @@ header{
         }
     }
 }
+
+
+::-webkit-scrollbar {
+    width: 6px; 
+    height: 6px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #223285; 
+    border-radius: 6px; 
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+    border-radius: 6px; 
+}
+
+/* Firefox */
+// html {
+//     scrollbar-width: thin; /* Thin scrollbar */
+//     scrollbar-color: #223285 #f1f1f1; /* Thumb color | Track color */
+// }

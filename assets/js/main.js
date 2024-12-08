@@ -149,6 +149,27 @@ $(document).ready(function() {
 		  }
 		]
 	});
-	
+
+
+
+
+	//Menu opened
+	$('#menuOpenIcon').on('click',function(){
+		$('.menuLinks').addClass('MenuOpened');
+		$('body').addClass('bodyMenuOpened');
+	}) 
+	$('#menuCloseIcon').on('click',function(){
+		$('.menuLinks').removeClass('MenuOpened');
+		$('body').removeClass('bodyMenuOpened');
+	})
+	$(document).on('click', function (event) {
+        if (
+            !$(event.target).closest('.menuLinks').length && // Check if click is outside the menu
+            !$(event.target).closest('#menuOpenIcon').length // Check if click is outside the open button
+        ) {
+            $('.menuLinks').removeClass('MenuOpened');
+            $('body').removeClass('bodyMenuOpened');
+        }
+    });
 });
   
