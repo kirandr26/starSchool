@@ -171,5 +171,13 @@ $(document).ready(function() {
             $('body').removeClass('bodyMenuOpened');
         }
     });
+
+	// Form JS
+
+	$('.block_01_tbn').on('click',function(){
+		$(this).parent().addClass('block_02_active');
+	})
+
+	
 });
   

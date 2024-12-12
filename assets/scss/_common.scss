@@ -73,6 +73,16 @@
             }
         }
     }
+    &.bgDark{
+        background-color: $blue;
+        color: $white;
+        .svgWrap svg:first-child{
+            opacity: 0;
+        }
+        .svgWrap svg:last-child{
+            opacity: 1;
+        }
+    }
 }
 
 .h1{
@@ -225,5 +235,43 @@ p{
         &:last-child{
             margin-bottom: 0;
         }
+    }
+}
+.bgImg{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+// Coming Soon
+
+
+.comingSoon{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #000521;
+    text-align: center;
+    h1{
+        color: $white;
+        font-size: 12vh;
+        line-height: 15vh;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    h3{
+        font-size: 8vh;
+        line-height: 10vh;
+        color: $white;
+        font-weight: 600;
+        margin-bottom: 50px;
     }
 }

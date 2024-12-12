@@ -148,6 +148,9 @@
     position: relative;
     padding: 20px 0;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     @include breakpoint(1366px){
         padding: 10px 0;
     }
@@ -159,6 +162,23 @@
         @include breakpoint(1366px){
             font-size: 14px;
             line-height: 24px;
+        }
+    }
+    &_menus{
+        ul{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            grid-gap: 20px;
+            li{
+                a{
+                    color: rgba($white,0.5);
+                    font-weight: 500;
+                    &:hover{
+                        color: $white;
+                    }
+                }
+            }
         }
     }
 }

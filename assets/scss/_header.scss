@@ -146,9 +146,14 @@ body{
                 padding: 10px 20px;
                 font-size: 24px;
                 line-height: 34px;
-                font-weight: 600;
+                font-weight: 500;
                 transition: all 400ms ease-in-out;
-                color: $orange;
+                color: $black;
+                @include breakpoint(1536px){
+                   font-size: 20px;
+                   line-height: 30px;
+
+                }
                 &:hover{
                     color: $blue;
                 }
@@ -270,3 +275,32 @@ header{
 //     scrollbar-width: thin; /* Thin scrollbar */
 //     scrollbar-color: #223285 #f1f1f1; /* Thumb color | Track color */
 // }
+
+.main_menu{
+    position: relative;
+    ul{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        grid-gap: 30px;
+        li{
+            a{
+                font-size: 24px;
+                line-height: 34px;
+                font-weight: 500;
+                transition: all 400ms ease-in-out;
+                @include breakpoint(1536px){
+                    font-size: 20px;
+                    line-height: 30px;
+ 
+                 }
+                &.active{
+                    color: $blue;
+                }
+                &:hover{
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
