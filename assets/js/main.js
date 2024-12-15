@@ -178,6 +178,64 @@ $(document).ready(function() {
 		$(this).parent().addClass('block_02_active');
 	})
 
+
+	// TABS
+
+	const breakpoint = 1024; // Breakpoint to switch from tabs to accordion
+
+	function tabsToAccordion() {
+	  const windowWidth = $(window).width();
+	  const tabContainer = $("#tabMenu");
+	  const tabContent = $("#tabContent");
+	  const accordionContainer = $("#accordionContainer");
+
+	  // Clear accordion if already created
+	  accordionContainer.empty();
+
+	  if (windowWidth <= breakpoint) {
+		// Convert Tabs to Accordion
+		tabContent.children(".tab-pane").each(function (index) {
+		  const id = $(this).attr("id");
+		  const title = tabContainer.find(`button[data-bs-target="#${id}"]`).text();
+		  const content = $(this).html();
+		  const isActive = $(this).hasClass("show") ? "show" : "";
+
+		  // Create Accordion Item
+		  const accordionItem = `
+			<div class="accordion-item">
+			  <h2 class="accordion-header" id="heading${index}">
+				<button class="accordion-button ${isActive ? "" : "collapsed"}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}">
+				  ${title}
+				</button>
+			  </h2>
+			  <div id="collapse${index}" class="accordion-collapse collapse ${isActive}" data-bs-parent="#accordionContainer">
+				<div class="accordion-body">
+				  ${content}
+				</div>
+			  </div>
+			</div>
+		  `;
+		  accordionContainer.append(accordionItem);
+		});
+
+		tabContainer.hide(); // Hide Tabs
+		tabContent.hide();  // Hide Tab Content
+		accordionContainer.show(); // Show Accordion
+	  } else {
+		// Show Tabs and Hide Accordion
+		tabContainer.show();
+		tabContent.show();
+		accordionContainer.hide();
+	  }
+	}
+
+	// Initial Load
+	tabsToAccordion();
+
+	// Re-run on Resize
+	$(window).on("resize", function () {
+	  tabsToAccordion();
+	});
 	
 });
   

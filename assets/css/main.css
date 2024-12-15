@@ -1694,6 +1694,9 @@ header.scrolled .logo a img {
 .titleWrap img {
   margin-bottom: 20px;
 }
+.titleWrap .h1 {
+  margin-bottom: 20px;
+}
 
 .facilities {
   margin-top: 60px;
@@ -3156,4 +3159,188 @@ header.scrolled .logo a img {
 #mapGoogle {
   width: 100%;
   height: 450px;
+}
+
+.facilitiesPage .pageBanner_cnt {
+  padding-bottom: 0;
+}
+.facilitiesPage .marquee {
+  position: relative;
+  bottom: inherit;
+  max-height: inherit;
+}
+.facilitiesPage .marquee-inner {
+  grid-gap: 15px;
+}
+.facilitiesPage .marquee-inner img {
+  width: 15vw;
+}
+
+.tabs_wrap {
+  padding-top: 15vh;
+  padding-bottom: 5vh;
+}
+.tabs_container .nav-tabs {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50px;
+}
+.tabs_container .nav-tabs .nav-item {
+  position: relative;
+  width: 20%;
+}
+.tabs_container .nav-tabs .nav-item:first-child button {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.tabs_container .nav-tabs .nav-item:last-child button {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.tabs_container .nav-tabs .nav-item button {
+  width: 100%;
+  background-color: rgba(0, 162, 172, 0.9);
+  padding: 15px 0;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #fff;
+  border: 0;
+  border-radius: 0;
+}
+@media (max-width: 1536px) {
+  .tabs_container .nav-tabs .nav-item button {
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+.tabs_container .nav-tabs .nav-item button.active {
+  background-color: #00a2ac;
+  font-weight: 600;
+}
+.tabs_container .nav-tabs .nav-item button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #F37952;
+}
+.tabs .tab-content {
+  padding: 0 80px;
+}
+@media (max-width: 1536px) {
+  .tabs .tab-content {
+    padding: 0 40px;
+  }
+}
+.tabs .pane_cnt {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+@media (max-width: 1536px) {
+  .tabs .pane_cnt {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+}
+.tabs .pane_cnt b {
+  font-weight: 600;
+  color: #F37952;
+}
+@media (max-width: 1024px) {
+  .tabs .nav-tabs {
+    display: none; /* Hide tabs on small screens */
+  }
+  .tabs .accordion-button {
+    cursor: pointer;
+  }
+}
+@media (min-width: 1025px) {
+  .tabs .accordion {
+    display: none; /* Hide accordion on large screens */
+  }
+}
+
+.pane_img {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: repeat(4, 1fr); /* Default to 4 equal columns */
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 20px;
+  grid-auto-rows: auto;
+  /* grid-1: 33% width (1/3 of the container) */
+  /* grid-2: 66% width (2/3 of the container) */
+  /* grid-3: 33% width, calculated based on 3 columns (100% / 3) */
+  /* grid-4: 100% width (full-width) */
+  /* grid-75: 75% width */
+}
+.pane_img .img_wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.pane_img .img_wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+.pane_img .grid-1 {
+  -ms-grid-column-span: 1;
+  grid-column: span 1; /* 33% width */
+}
+.pane_img .grid-2 {
+  -ms-grid-column-span: 2;
+  grid-column: span 2; /* 66% width */
+}
+.pane_img .grid-3 {
+  width: 33.3333333333%; /* 33% width calculated */
+  -ms-grid-column-span: 1;
+  grid-column: span 1;
+}
+.pane_img .grid-4 {
+  -ms-grid-column-span: 4;
+  grid-column: span 4; /* Full width (100%) */
+}
+.pane_img .grid-75 {
+  width: 75%; /* 75% width */
+  -ms-grid-column-span: 3;
+  grid-column: span 3; /* Make it span 3 columns (75%) */
+}
+@media (max-width: 1024px) {
+  .pane_img {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns for screens <= 1024px */
+  }
+}
+@media (max-width: 768px) {
+  .pane_img {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns for screens <= 768px */
+  }
+}
+@media (max-width: 480px) {
+  .pane_img {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr; /* 1 column for screens <= 480px */
+  }
 }

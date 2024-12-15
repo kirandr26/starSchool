@@ -7,18 +7,431 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
-    <title>Coming Soon</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <title>Star  School Karur</title>
 </head>
 <body>
-    <div class="comingSoon padding_div" style="background-image: url(./assets/images/footer/footer-bg.png);">
-        <h1>Shaping Young Minds, Building Bright Futures</h1>
-        <h3>Stay Tuned!</h3>
-        <a href="https://kirandr26.github.io/starSchool/"><img src="./assets/images/header/logo.png" alt=""></a>
-  </div>
+    <header>
+        <div class="preHeader bgImg" style="background-image:url('./assets/images/header/preheader-bg.jpg')">
+            <p><a href="https://kirandr26.github.io/starSchool/school-admission.html">Apply to our school and take the first step towards a brighter future <img src="./assets/images/header/right-arrow.svg" alt=""></a></p>
+        </div>
+        <section class="padding_div shadowHeader">
+            <div class="header">
+                <div class="logo">
+                    <a href="https://kirandr26.github.io/starSchool/"><img src="./assets/images/header/logo.png" alt="Logo"></a>
+                </div>
+                <div class="header_menu">
+                    <div class="main_menu">
+                        <ul>
+                            <li><a href="https://kirandr26.github.io/starSchool/about-us.html">About Us</a></li>
+                            <li><a href="https://kirandr26.github.io/starSchool/team.html">Team</a></li>
+                            <li><a href="https://kirandr26.github.io/starSchool/facilities.html">Facilities</a></li>
+                            <li><a href="https://kirandr26.github.io/starSchool/coming-soon.html">Academy </a></li>
+                        </ul>
+                    </div>
+                    <a href="https://kirandr26.github.io/starSchool/school-admission.html" class="cBtn">Apply 
+                       <div class="svgWrap">
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="red" xmlns="http://www.w3.org/2000/svg"><path d="M1 8.14628H18.7234M18.7234 8.14628L12.0771 1.5M18.7234 8.14628L12.0771 14.7926" stroke="#223285" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="red" xmlns="http://www.w3.org/2000/svg"><path d="M1 8.14628H18.7234M18.7234 8.14628L12.0771 1.5M18.7234 8.14628L12.0771 14.7926" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                       </div>
+                    </a>
 
+                    <div class="menuIcon" id="menuOpenIcon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <div class="menuLinks">
+            <div class="menuClose" id="menuCloseIcon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="https://kirandr26.github.io/starSchool/message-from-chairman.html">Message from Chairman</a></li>
+                <li><a href="https://kirandr26.github.io/starSchool//message-from-principal.html">Message from Principal</a></li>
+                <li><a href="https://kirandr26.github.io/starSchool/contact-us.html">Contact Us</a></li>
+            </ul>
+            <div class="menuLinks_inner">
+               
+            </div>
+            
+        </div>
+    </header>
+    <div class="pageWrap facilitiesPage pagePaddingTop">
+        <section class="pageBanner">
+            <div class="pageBanner_cnt">
+                <div class="titleWrap">
+                    <div class="titleIcon">
+                        <img src="./assets/images/home/title-icon.svg" alt="">
+                    </div>
+                    <h1 class="h1">Supporting Success Through Outstanding Infrastructure</h1>
+                    <p>Welcome to Star School, where a conducive learning environment drives academic success and holistic development. Our campus boasts top-notch facilities, including study centers, science labs, an ICT Centre, a hygienic dining hall, and sports facilities. Each space is designed to foster a dynamic learning experience. We are committed to providing the best educational journey, helping students thrive academically and personally. Explore our facilities and see how we empower students to reach their full potential.</p>
+                </div>
+            </div>
+
+            <div class="marquee">
+                <div class="marquee-inner">
+                    <a href="javascript:void(0)">
+                        <img src="./assets/images/home/banner/1.png" alt="">
+                    </a>
+                    <a href="javascript:void(0)">
+                        <img src="./assets/images/home/banner/2.png" alt="">
+                    </a>
+                    <a href="javascript:void(0)">
+                        <img src="./assets/images/home/banner/3.png" alt="">
+                    </a>
+                    <a href="javascript:void(0)">
+                        <img src="./assets/images/home/banner/4.png" alt="">
+                    </a>
+                    <a href="javascript:void(0)">
+                        <img src="./assets/images/home/banner/5.png" alt="">
+                    </a>
+                    <a href="javascript:void(0)">
+                        <img src="./assets/images/home/banner/6.png" alt="">
+                    </a>
+                    <a href="javascript:void(0)">
+                        <img src="./assets/images/home/banner/7.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="padding_div tabs_wrap">
+            <div class="tabs">
+                <div class="tabs_container">
+                    <!-- Bootstrap Tabs -->
+                    <ul class="nav nav-tabs" id="tabMenu" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab">Study Center</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab">Science Lab</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab">ICT Center</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab4-tab" data-bs-toggle="tab" data-bs-target="#tab4" type="button" role="tab">Dining hall</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab4-tab" data-bs-toggle="tab" data-bs-target="#tab5" type="button" role="tab">Sports Center</button>
+                      </li>
+                    </ul>
+                
+                    <!-- Tab Content -->
+                    <div class="tab-content" id="tabContent">
+                      <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                            <div class="pane_cnt">
+                                <p><b>Study Center</b>: Our centers are thoughtfully designed to support daily educational pursuits, featuring ergonomic seating arrangements that ensure student comfort. They are outfitted with state-of-the-art ICT facilities, including high-speed internet, modern computers, and interactive whiteboards, to enhance learning and foster a dynamic educational environment.</p>
+                            </div>
+                            <div class="pane_img">
+                                <div class="img_wrap grid-1">
+                                    <img src="./assets/images/facilities/img-01.png" alt="">
+                                </div>
+                            
+                                <div class="img_wrap grid-2">
+                                    <img src="./assets/images/facilities/img-02.png" alt="">
+                                </div>
+                                <div class="img_wrap grid-1">
+                                    <img src="./assets/images/facilities/img-03.png" alt="">
+                                </div>
+                            
+                                <div class="img_wrap grid-2">
+                                    <img src="./assets/images/facilities/img-04.png" alt="">
+                                </div>
+                            
+                                <div class="img_wrap grid-1">
+                                    <img src="./assets/images/facilities/img-05.png" alt="">
+                                </div>
+                                <div class="img_wrap grid-1">
+                                    <img src="./assets/images/facilities/img-06.png" alt="">
+                                </div>
+                                <div class="img_wrap grid-4">
+                                    <img src="./assets/images/facilities/img-07.png" alt="">
+                                </div>
+                                <div class="img_wrap grid-4">
+                                    <img src="./assets/images/facilities/img-08.png" alt="">
+                                </div>
+                            </div>      
+                      </div>
+                      <div class="tab-pane fade" id="tab2" role="tabpanel">
+                        <div class="pane_cnt">
+                            <p><b>Science Lab</b>: Our centers are thoughtfully designed to support daily educational pursuits, featuring ergonomic seating arrangements that ensure student comfort. They are outfitted with state-of-the-art ICT facilities, including high-speed internet, modern computers, and interactive whiteboards, to enhance learning and foster a dynamic educational environment.</p>
+                        </div>
+                        <div class="pane_img">
+                            <div class="img_wrap grid-1">
+                                <img src="./assets/images/facilities/img-01.png" alt="">
+                            </div>
+                        
+                            <div class="img_wrap grid-2">
+                                <img src="./assets/images/facilities/img-02.png" alt="">
+                            </div>
+                            <div class="img_wrap grid-1">
+                                <img src="./assets/images/facilities/img-03.png" alt="">
+                            </div>
+                        
+                            <div class="img_wrap grid-2">
+                                <img src="./assets/images/facilities/img-04.png" alt="">
+                            </div>
+                        
+                            <div class="img_wrap grid-1">
+                                <img src="./assets/images/facilities/img-05.png" alt="">
+                            </div>
+                            <div class="img_wrap grid-1">
+                                <img src="./assets/images/facilities/img-06.png" alt="">
+                            </div>
+                            <div class="img_wrap grid-4">
+                                <img src="./assets/images/facilities/img-07.png" alt="">
+                            </div>
+                            <div class="img_wrap grid-4">
+                                <img src="./assets/images/facilities/img-08.png" alt="">
+                            </div>
+                        </div> 
+                      </div>
+                      <div class="tab-pane fade" id="tab3" role="tabpanel">
+                        <div class="pane_cnt">
+                            <p><b>ICT Center</b>: Our centers are thoughtfully designed to support daily educational pursuits, featuring ergonomic seating arrangements that ensure student comfort. They are outfitted with state-of-the-art ICT facilities, including high-speed internet, modern computers, and interactive whiteboards, to enhance learning and foster a dynamic educational environment.</p>
+                        </div>
+                        <div class="pane_img">
+                            <div class="img_wrap grid-1">
+                                <img src="./assets/images/facilities/img-01.png" alt="">
+                            </div>
+                        
+                            <div class="img_wrap grid-2">
+                                <img src="./assets/images/facilities/img-02.png" alt="">
+                            </div>
+                            <div class="img_wrap grid-1">
+                                <img src="./assets/images/facilities/img-03.png" alt="">
+                            </div>
+                        
+                            <div class="img_wrap grid-2">
+                                <img src="./assets/images/facilities/img-04.png" alt="">
+                            </div>
+                        
+                            <div class="img_wrap grid-1">
+                                <img src="./assets/images/facilities/img-05.png" alt="">
+                            </div>
+                            <div class="img_wrap grid-1">
+                                <img src="./assets/images/facilities/img-06.png" alt="">
+                            </div>
+                            <div class="img_wrap grid-4">
+                                <img src="./assets/images/facilities/img-07.png" alt="">
+                            </div>
+                            <div class="img_wrap grid-4">
+                                <img src="./assets/images/facilities/img-08.png" alt="">
+                            </div>
+                        </div> 
+                      </div>
+                      <div class="tab-pane fade" id="tab4" role="tabpanel">
+                        <div class="pane_cnt">
+                            <p><b>Dining hall</b>: Our centers are thoughtfully designed to support daily educational pursuits, featuring ergonomic seating arrangements that ensure student comfort. They are outfitted with state-of-the-art ICT facilities, including high-speed internet, modern computers, and interactive whiteboards, to enhance learning and foster a dynamic educational environment.</p>
+                        </div>
+                        <div class="pane_img">
+                            <div class="img_wrap grid-1">
+                                <img src="./assets/images/facilities/img-01.png" alt="">
+                            </div>
+                        
+                            <div class="img_wrap grid-2">
+                                <img src="./assets/images/facilities/img-02.png" alt="">
+                            </div>
+                            <div class="img_wrap grid-1">
+                                <img src="./assets/images/facilities/img-03.png" alt="">
+                            </div>
+                        
+                            <div class="img_wrap grid-2">
+                                <img src="./assets/images/facilities/img-04.png" alt="">
+                            </div>
+                        
+                            <div class="img_wrap grid-1">
+                                <img src="./assets/images/facilities/img-05.png" alt="">
+                            </div>
+                            <div class="img_wrap grid-1">
+                                <img src="./assets/images/facilities/img-06.png" alt="">
+                            </div>
+                            <div class="img_wrap grid-4">
+                                <img src="./assets/images/facilities/img-07.png" alt="">
+                            </div>
+                            <div class="img_wrap grid-4">
+                                <img src="./assets/images/facilities/img-08.png" alt="">
+                            </div>
+                        </div> 
+                      </div>
+                      <div class="tab-pane fade" id="tab5" role="tabpanel">
+                        <div class="pane_cnt">
+                            <p><b>Sports Center</b>: Our centers are thoughtfully designed to support daily educational pursuits, featuring ergonomic seating arrangements that ensure student comfort. They are outfitted with state-of-the-art ICT facilities, including high-speed internet, modern computers, and interactive whiteboards, to enhance learning and foster a dynamic educational environment.</p>
+                        </div>
+                        <div class="pane_img">
+                            <div class="img_wrap grid-1">
+                                <img src="./assets/images/facilities/img-01.png" alt="">
+                            </div>
+                        
+                            <div class="img_wrap grid-2">
+                                <img src="./assets/images/facilities/img-02.png" alt="">
+                            </div>
+                            <div class="img_wrap grid-1">
+                                <img src="./assets/images/facilities/img-03.png" alt="">
+                            </div>
+                        
+                            <div class="img_wrap grid-2">
+                                <img src="./assets/images/facilities/img-04.png" alt="">
+                            </div>
+                        
+                            <div class="img_wrap grid-1">
+                                <img src="./assets/images/facilities/img-05.png" alt="">
+                            </div>
+                            <div class="img_wrap grid-1">
+                                <img src="./assets/images/facilities/img-06.png" alt="">
+                            </div>
+                            <div class="img_wrap grid-4">
+                                <img src="./assets/images/facilities/img-07.png" alt="">
+                            </div>
+                            <div class="img_wrap grid-4">
+                                <img src="./assets/images/facilities/img-08.png" alt="">
+                            </div>
+                        </div> 
+                      </div>
+                    </div>
+                
+                    <!-- Placeholder for Accordion -->
+                    <div class="accordion mt-3" id="accordionContainer"></div>
+                  </div>
+            </div>
+
+        </section>
+       
+        <section class="padding_div">
+            <div class="newsLetter preFooter">
+                <div class="titleWrap">
+                    <div class="titleIcon">
+                        <img src="./assets/images/home/title-icon.svg" alt="">
+                    </div>
+                    <h1 class="h1">International Education with Indian Values!</h1>
+                    <p>At Star School, we aim to fulfil child's educational and development needs in a nurturing environment. Our team is happy to support you and answer all your queries related to the admission process.</p>
+                    <a href="javascript:void(0)" class="cBtn">Enquire for Admission 
+                        <div class="svgWrap">
+                         <svg width="20" height="16" viewBox="0 0 20 16" fill="red" xmlns="http://www.w3.org/2000/svg"><path d="M1 8.14628H18.7234M18.7234 8.14628L12.0771 1.5M18.7234 8.14628L12.0771 14.7926" stroke="#223285" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                         <svg width="20" height="16" viewBox="0 0 20 16" fill="red" xmlns="http://www.w3.org/2000/svg"><path d="M1 8.14628H18.7234M18.7234 8.14628L12.0771 1.5M18.7234 8.14628L12.0771 14.7926" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </div>
+                     </a>
+                </div>
+               
+                <div class="newsLetter_fixedImg">
+                    <img src="./assets/images/home/newsLetter-left-image.png" alt="">
+                    <img src="./assets/images/home/newsLetter-right-image.png" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="footer_marquee">
+        <div class="marqueeFooter">
+            <div class="marquee_item">
+                <h1>STAR SCHOOL</h1> <img src="./assets/images/footer/star.png" alt="">
+            </div>
+            <div class="marquee_item">
+                <h1>STAR SCHOOL</h1> <img src="./assets/images/footer/star.png" alt="">
+            </div>
+            <div class="marquee_item">
+                <h1>STAR SCHOOL</h1> <img src="./assets/images/footer/star.png" alt="">
+            </div>
+            <div class="marquee_item">
+                <h1>STAR SCHOOL</h1> <img src="./assets/images/footer/star.png" alt="">
+            </div>
+            <div class="marquee_item">
+                <h1>STAR SCHOOL</h1> <img src="./assets/images/footer/star.png" alt="">
+            </div>
+            <div class="marquee_item">
+                <h1>STAR SCHOOL</h1> <img src="./assets/images/footer/star.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="footer padding_div bgImg" style="background-image: url(./assets/images/footer/footer-bg.png);">
+        <div class="logoSection">
+            <div class="div1 logoDiv">
+                <a href="https://kirandr26.github.io/starSchool/"><img src="./assets/images/header/logo.png" alt=""></a>
+                <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                <div class="socialLinks">
+                    <ul>
+                        <li><a href="javascript:void(0)"><i class="fa-brands fa-facebook-f fa-fw"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="fa-brands fa-linkedin-in fa-fw"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="fa-brands fa-instagram fa-fw"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="div2 logoDiv">
+                <div class="iconWrap">
+                    <i class="fa-solid fa-location-dot fa-fw"></i>
+                </div>
+                <div class="cntWrap">
+                    <p>576, 3rd floor, Service Road, 100 Feet Ring Rd, near Bank Of India, HSR Layout, </p>
+                </div>
+            </div>
+            <div class="div3 logoDiv">
+                <div class="iconWrap">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="cntWrap">
+                    <a href="mailto:starschool@gmail.com">starschool@gmail.com</a>
+                </div>
+            </div>
+            <div class="div4 logoDiv">
+                <div class="iconWrap">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="cntWrap">
+                    <a href="tel:+91 76457 83403">+91 76457 83403</a>
+                    <a href="tel:+91 76457 83404">+91 76457 83404</a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="menusWrap">
+            <div class="menuLinks">
+                <a href="javascript:void(0)">Privacy Policy</a>
+                <a href="javascript:void(0)">Terms of Use</a>
+                <a href="javascript:void(0)">User Agreement</a>
+                <a href="javascript:void(0)">GDPR Privacy Policy</a>
+            </div>
+            <div class="menuLinks">
+                <a href="javascript:void(0)">Privacy Policy</a>
+                <a href="javascript:void(0)">Terms of Use</a>
+                <a href="javascript:void(0)">User Agreement</a>
+                <a href="javascript:void(0)">GDPR Privacy Policy</a>
+            </div>
+            <div class="menuLinks">
+                <a href="javascript:void(0)">About Us</a>
+                <a href="javascript:void(0)">Contact Us</a>
+                <a href="javascript:void(0)">Pricing</a>
+                <a href="javascript:void(0)">FAQs</a>
+            </div>
+            <div class="menuLinks">
+                <a href="javascript:void(0)">About Us</a>
+                <a href="javascript:void(0)">Contact Us</a>
+                <a href="javascript:void(0)">Pricing</a>
+                <a href="javascript:void(0)">FAQs</a>
+            </div>
+        </div> -->
+        <div class="copyRight">
+            <div class="copyRight_menus">
+                <ul>
+                    <li>
+                        <a href="https://kirandr26.github.io/starSchool/coming-soon.html">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="https://kirandr26.github.io/starSchool/coming-soon.html">Terms of Use</a>
+                    </li>
+                </ul>
+            </div>
+            <p>&#169; 2024 Star School Holdings Inc. All rights reserved.</p>
+        </div>
+    </div>
     <script src="./assets/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="./assets/js/main.js"></script>
+
 </body>
 </html>
